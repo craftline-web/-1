@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企業理念 | ソヴリックコーポレーション</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;800&family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12201A;
+    --forest:#8DC63F;
+    --forest-deep:#5C8A2E;
+    --forest-2:#28603F;
+    --paper:#FAFAF7;
+    --paper-dim:#F0F1EA;
+    --line: rgba(18,32,26,0.10);
+    --line-dark: rgba(255,255,255,0.14);
+    --text-soft: rgba(18,32,26,0.62);
+    --gold:#B99A57;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans JP', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .mincho{font-family:'Shippori Mincho', serif;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  section{padding:110px 0;}
+  @media (max-width:720px){ section{padding:72px 0;} }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(250,250,247,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:1080px; margin:0 auto; padding:20px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{
+    font-family:'Shippori Mincho', serif;
+    font-weight:800; font-size:17px; letter-spacing:0.06em;
+    display:flex; align-items:center; gap:10px;
+  }
+  .logo .mark{
+    width:9px; height:9px; background:var(--forest);
+    clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+  .navlinks{display:flex; gap:34px; font-size:13.5px;}
+  .navlinks a{opacity:0.68; transition:opacity .2s;}
+  .navlinks a:hover, .navlinks a.active{opacity:1;}
+  .nav-cta{
+    font-size:12.5px; letter-spacing:0.05em; padding:10px 22px;
+    background:var(--forest); color:var(--ink);
+    font-weight:700;
+  }
+  @media (max-width:820px){ .navlinks{display:none;} }
+
+  /* ---------- PAGE HEAD ---------- */
+  .page-head{
+    padding:170px 0 60px;
+    border-bottom:1px solid var(--line);
+  }
+  .breadcrumb{
+    font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--text-soft);
+    margin-bottom:20px;
+  }
+  .breadcrumb a{color:var(--forest-deep); border-bottom:1px solid var(--forest-deep); padding-bottom:1px;}
+  .page-head h1{
+    font-family:'Shippori Mincho', serif; font-weight:800;
+    font-size:clamp(28px, 4vw, 42px);
+  }
+
+  .sec-num{
+    font-family:'JetBrains Mono', monospace; font-size:11.5px; color:var(--gold);
+    letter-spacing:0.1em; margin-bottom:14px; display:block;
+  }
+
+  .link-more{
+    font-family:'JetBrains Mono', monospace; font-size:12.5px; letter-spacing:0.05em;
+    color:var(--forest-deep); white-space:nowrap; border-bottom:1px solid var(--forest-deep); padding-bottom:3px;
+  }
+
+  /* ---------- PHILOSOPHY ---------- */
+  .philosophy{
+    background:var(--forest-2); color:var(--paper);
+    position:relative; overflow:hidden;
+  }
+  .philosophy::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: linear-gradient(var(--line-dark) 1px, transparent 1px), linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
+    background-size:60px 60px; opacity:0.5; pointer-events:none;
+  }
+  .phi-quote{
+    font-family:'Shippori Mincho', serif; font-weight:600;
+    font-size:clamp(19px, 3vw, 30px); line-height:1.9; position:relative;
+    max-width:760px; word-break:keep-all; overflow-wrap:break-word;
+  }
+  .phi-gold{color:var(--gold);}
+  .phi-body{margin-top:48px; position:relative; max-width:720px;}
+  .phi-body h4{
+    font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.14em;
+    color:var(--gold); margin-bottom:18px;
+  }
+  .phi-body p{font-size:14.5px; color:rgba(250,250,247,0.82); font-weight:300;}
+  .phi-body p + p{margin-top:20px;}
+
+  /* ---------- BACK CTA ---------- */
+  .back-cta{
+    padding:70px 0;
+    text-align:center;
+  }
+  .btn{
+    font-family:'Noto Sans JP', sans-serif; font-weight:700;
+    font-size:14px; padding:16px 30px;
+    display:inline-flex; align-items:center; gap:10px;
+    border:1px solid transparent; cursor:pointer; transition:transform .18s, opacity .18s;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--forest); color:var(--ink);}
+  .btn-ghost{border-color:var(--ink); color:var(--ink);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink); color:rgba(250,250,247,0.65); padding:60px 0 30px;}
+  .f-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:28px; padding-bottom:36px; border-bottom:1px solid var(--line-dark);}
+  .f-logo{font-family:'Shippori Mincho', serif; font-weight:800; color:var(--paper); font-size:16px;}
+  .f-links{display:flex; gap:22px; font-size:13px;}
+  .f-links a{opacity:0.75; transition:opacity .2s;}
+  .f-links a:hover{opacity:1;}
+  .f-bottom{
+    margin-top:26px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-family:'JetBrains Mono', monospace; font-size:11px; opacity:0.5;
+  }
+
+  /* ---------- STICKY CTA ---------- */
+  .sticky-cta{
+    position:fixed; left:0; right:0; bottom:0; z-index:200;
+    background:var(--forest);
+    box-shadow:0 -4px 16px rgba(0,0,0,0.12);
+  }
+  .sticky-cta a{
+    display:block; text-align:center; padding:22px 20px;
+    font-family:'Noto Sans JP', sans-serif; font-weight:800; font-size:17px;
+    letter-spacing:0.02em;
+    color:var(--ink);
+  }
+  body{ padding-bottom:74px; }
+
+  /* ---------- MENU TOGGLE & OVERLAY ---------- */
+  .menu-toggle{
+    display:none; flex-direction:column; justify-content:space-between;
+    width:26px; height:18px; background:none; border:none; cursor:pointer; padding:0;
+  }
+  .menu-toggle span{display:block; width:100%; height:2px; background:var(--ink);}
+  @media (max-width:820px){ .menu-toggle{display:flex;} }
+
+  .menu-overlay{
+    position:fixed; inset:0; z-index:300; background:var(--paper);
+    display:none; overflow-y:auto;
+  }
+  .menu-overlay.open{display:block;}
+  .menu-overlay-head{
+    display:flex; align-items:center; gap:12px; padding:22px 24px;
+    border-bottom:1px solid var(--line);
+  }
+  .menu-overlay-head button{
+    background:none; border:none; cursor:pointer;
+    font-family:'JetBrains Mono', monospace; font-size:13px; letter-spacing:0.08em;
+    color:var(--ink); display:flex; align-items:center; gap:10px;
+  }
+  .menu-overlay-head .x{font-size:20px; line-height:1;}
+  .menu-list{padding:0 24px; margin-top:8px;}
+  .menu-list a{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 6px; border-bottom:1px solid var(--line);
+    font-family:'Shippori Mincho', serif; font-weight:700; font-size:17px;
+    color:var(--ink);
+  }
+  .menu-list a .arrow{font-family:'JetBrains Mono', monospace; font-size:15px; color:var(--forest-deep);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo"><span class="mark"></span>ソヴリックコーポレーション</div>
+    <nav class="navlinks">
+      <a href="company.html">会社概要</a>
+      <a href="philosophy.html" class="active">企業理念</a>
+      <a href="index.html#access">アクセス</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">お問い合わせ</a>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-overlay-head">
+    <button onclick="toggleMenu()"><span class="x">×</span> CLOSE</button>
+  </div>
+  <div class="menu-list">
+    <a href="index.html" onclick="toggleMenu()"><span>ホーム</span><span class="arrow">→</span></a>
+    <a href="company.html" onclick="toggleMenu()"><span>会社概要</span><span class="arrow">→</span></a>
+    <a href="philosophy.html" onclick="toggleMenu()"><span>企業理念</span><span class="arrow">→</span></a>
+    <a href="index.html#access" onclick="toggleMenu()"><span>アクセス</span><span class="arrow">→</span></a>
+    <a href="index.html#contact" onclick="toggleMenu()"><span>お問い合わせ</span><span class="arrow">→</span></a>
+  </div>
+</div>
+
+
+<div class="page-head">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">トップ</a> ／ 企業理念</div>
+    <h1 class="mincho">企業理念</h1>
+  </div>
+</div>
+
+<!-- ================= PHILOSOPHY ================= -->
+<section id="philosophy" class="philosophy">
+  <div class="wrap">
+    <span class="sec-num mono" style="color:var(--gold);">PHILOSOPHY</span>
+    <p class="phi-quote" style="margin-top:24px;">
+      すべての人が<br>
+      本当の<span class="phi-gold">笑顔</span>になるように、<br>
+      誇りを持って不動産の<br>
+      <span class="phi-gold">歓び</span>を贈り続けます。
+    </p>
+
+    <div class="phi-body">
+      <h4>～ ソヴリックの由来 ～</h4>
+      <p>
+        Soveric Corporationの「Soveric」は、sovereign（ソヴリン）の造語です。
+        【sovereign】とは「最高の・至上の・最大限の」という意味を持ち、
+        お客様の"sovereign good（至上善）"になるという想いを込めています。
+      </p>
+      <p>
+        不動産投資は、夢を現実のカタチにする力を持っています。
+        私どものお客様の中には、海外で暮らしたり、地方で農業を始めるなど、
+        将来構想を実現された方が多くいらっしゃいます。老後を見据え始めた
+        50代の方はもちろん、まだ早いとお考えの30代・40代の方にこそ、
+        資産運用で夢を叶える第一歩を踏み出していただきたいと願っています。
+      </p>
+      <p>
+        不動産投資を始めると、街のアパートやマンションを見る目が変わります。
+        建物のデザインや管理状態、おしゃれなカフェのアイデアさえも、
+        投資用マンションに活かしたくなるでしょう。不動産投資は楽しむもの。
+        私たちは不動産投資の魅力をご提案し、全力でフォローします。
+        ぜひ、不動産投資の楽しさを知っていただき、夢を現実にしてください。
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" style="padding:0 24px; margin-top:-40px; margin-bottom:40px; text-align:right;">
+  <a href="company.html" class="link-more">会社概要を見る →</a>
+</div>
+
+<!-- ================= BACK CTA ================= -->
+<div class="back-cta">
+  <a href="index.html#contact" class="btn btn-primary">無料相談を申し込む →</a>
+  <a href="index.html" class="btn btn-ghost" style="margin-left:12px;">トップページに戻る</a>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-logo">ソヴリックコーポレーション</div>
+      <div class="f-links">
+        <a href="#">Instagram</a>
+        <a href="#">X</a>
+        <a href="#">LINE公式</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Soveric Corporation</span>
+      <span>大阪府大阪市中央区久太郎町3丁目5番13号 又一ビルディング7階 ／ 080-0000-0000</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="index.html#contact">無料相談を申し込む →</a>
+</div>
+
+
+<script>
+  function toggleMenu(){
+    document.getElementById('menuOverlay').classList.toggle('open');
+  }
+</script>
+</body>
+</html>
